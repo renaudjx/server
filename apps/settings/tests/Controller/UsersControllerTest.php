@@ -8,7 +8,7 @@
  * See the COPYING-README file.
  */
 
-namespace OCA\Settings\Tests\Activity;
+namespace OCA\Settings\Tests\Controller;
 
 use OC\Accounts\AccountManager;
 use OC\Encryption\Exceptions\ModuleDoesNotExistsException;

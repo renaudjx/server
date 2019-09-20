@@ -20,7 +20,7 @@
  *
  */
 
-namespace OCA\Settings\Tests\Activity;
+namespace OCA\Settings\Tests\Controller;
 
 use OC\App\AppStore\Bundles\BundleFetcher;
 use OC\App\AppStore\Fetcher\AppFetcher;

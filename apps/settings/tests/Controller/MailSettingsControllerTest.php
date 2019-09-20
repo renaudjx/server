@@ -11,7 +11,7 @@
  * See the COPYING-README file.
  */
 
-namespace OCA\Settings\Tests\Activity;
+namespace OCA\Settings\Tests\Controller;
 
 use OC\Mail\Message;
 use OCA\Settings\Controller\MailSettingsController;

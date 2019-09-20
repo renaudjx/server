@@ -19,7 +19,7 @@
  *
  */
 
-namespace OCA\Settings\Tests\Activity;
+namespace OCA\Settings\Tests\Controller;
 
 use OCA\Settings\Controller\CertificateController;
 use OCP\App\IAppManager;

@@ -19,7 +19,7 @@
  *
  */
 
-namespace OCA\Settings\Tests\Activity;
+namespace OCA\Settings\Tests\Controller;
 
 use OC;
 use OC\DB\Connection;

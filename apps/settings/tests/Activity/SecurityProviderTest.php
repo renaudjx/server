@@ -29,18 +29,18 @@ use OCP\Activity\IManager;
 use OCP\IL10N;
 use OCP\IURLGenerator;
 use OCP\L10N\IFactory;
-use PHPUnit_Framework_MockObject_MockObject;
+use PHPUnit\Framework\MockObject\MockObject;
 use Test\TestCase;
 
 class SecurityProviderTest extends TestCase {
 
-	/** @var IFactory|PHPUnit_Framework_MockObject_MockObject */
+	/** @var IFactory|MockObject */
 	private $l10n;
 
-	/** @var IURLGenerator|PHPUnit_Framework_MockObject_MockObject */
+	/** @var IURLGenerator|MockObject */
 	private $urlGenerator;
 
-	/** @var IManager|PHPUnit_Framework_MockObject_MockObject */
+	/** @var IManager|MockObject */
 	private $activityManager;
 
 	/** @var SecurityProvider */
@@ -53,7 +53,7 @@ class SecurityProviderTest extends TestCase {
 		$this->urlGenerator = $this->createMock(IURLGenerator::class);
 		$this->activityManager = $this->createMock(IManager::class);
 
-		$this->provider = new \OCA\Settings\Activity\SecurityProvider($this->l10n, $this->urlGenerator, $this->activityManager);
+		$this->provider = new SecurityProvider($this->l10n, $this->urlGenerator, $this->activityManager);
 	}
 
 	public function testParseUnrelated() {

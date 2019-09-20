@@ -61,7 +61,7 @@ class UsersController extends AUserData {
 	private $logger;
 	/** @var IFactory */
 	private $l10nFactory;
-	/** @var \OCA\Settings\Mailer\NewUserMailHelper */
+	/** @var NewUserMailHelper */
 	private $newUserMailHelper;
 	/** @var FederatedFileSharingFactory */
 	private $federatedFileSharingFactory;
@@ -81,7 +81,7 @@ class UsersController extends AUserData {
 	 * @param AccountManager $accountManager
 	 * @param ILogger $logger
 	 * @param IFactory $l10nFactory
-	 * @param \OCA\Settings\Mailer\NewUserMailHelper $newUserMailHelper
+	 * @param NewUserMailHelper $newUserMailHelper
 	 * @param FederatedFileSharingFactory $federatedFileSharingFactory
 	 * @param ISecureRandom $secureRandom
 	 */
