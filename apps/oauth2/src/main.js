@@ -20,15 +20,14 @@
  *
  */
 
-import Vue from 'vue';
-import App from './App.vue';
+import Vue from 'vue'
+import App from './App.vue'
 
-Vue.prototype.t = t;
-Vue.prototype.OC = OC;
+Vue.prototype.t = t
+Vue.prototype.OC = OC
 
 const app = new Vue({
 	render: h => h(App)
-}).$mount('#oauth2');
+}).$mount('#oauth2')
 
-export { app };
-
+export { app }

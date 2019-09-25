@@ -20,19 +20,13 @@
   -
   -->
 
-<template>
-	<img :src="scoreImage" class="app-score-image" />
-</template>
 <script>
-	export default {
-		name: 'appScore',
-		props: ['score'],
-		computed: {
-			scoreImage() {
-				let score = Math.round( this.score * 10 );
-				let imageName = 'rating/s' + score + '.svg';
-				return OC.imagePath('core', imageName);
-			}
+export default {
+	name: 'PrefixMixin',
+	methods: {
+		prefix(prefix, content) {
+			return prefix + '_' + content
 		}
-	};
+	}
+}
 </script>

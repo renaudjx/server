@@ -20,21 +20,19 @@
   -
   -->
 
+<template>
+	<img :src="scoreImage" class="app-score-image">
+</template>
 <script>
-	export default {
-		name: 'svgFilterMixin',
-		mounted() {
-			this.filterId = 'invertIconApps' + Math.floor((Math.random() * 100 )) + new Date().getSeconds() + new Date().getMilliseconds();
-		},
-		computed: {
-			filterUrl () {
-				return `url(#${this.filterId})`;
-			},
-		},
-		data() {
-			return {
-				filterId: '',
-			};
-		},
+export default {
+	name: 'AppScore',
+	props: ['score'],
+	computed: {
+		scoreImage() {
+			let score = Math.round(this.score * 10)
+			let imageName = 'rating/s' + score + '.svg'
+			return OC.imagePath('core', imageName)
+		}
 	}
+}
 </script>

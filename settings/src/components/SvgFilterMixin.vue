@@ -21,12 +21,20 @@
   -->
 
 <script>
-	export default {
-		name: 'prefixMixin',
-		methods: {
-			prefix (prefix, content) {
-				return prefix + '_' + content;
-			},
+export default {
+	name: 'SvgFilterMixin',
+	data() {
+		return {
+			filterId: ''
 		}
+	},
+	computed: {
+		filterUrl() {
+			return `url(#${this.filterId})`
+		}
+	},
+	mounted() {
+		this.filterId = 'invertIconApps' + Math.floor((Math.random() * 100)) + new Date().getSeconds() + new Date().getMilliseconds()
 	}
+}
 </script>
