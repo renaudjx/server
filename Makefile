@@ -1,6 +1,7 @@
 all: clean dev-setup build-js-production
 
-dev-setup: clean-dev npm-init
+# Dev env management
+dev-setup: clean clean-dev npm-init
 
 npm-init:
 	npm install
@@ -8,6 +9,7 @@ npm-init:
 npm-update:
 	npm update
 
+# Building
 build-js:
 	npm run dev
 
@@ -17,9 +19,14 @@ build-js-production:
 watch-js:
 	npm run watch
 
-clean-dev:
-	rm -rf node_modules
+# Linting
+lint:
+	npm run lint
 
+lint-fix:
+	npm run lint:fix
+
+# Cleaning
 clean:
 	rm -rf apps/accessibility/js/
 	rm -rf apps/comments/js/
@@ -33,6 +40,9 @@ clean:
 	rm -rf apps/workflowengine/js/
 	rm -rf core/js/dist
 	rm -rf settings/js/vue-*
+
+clean-dev:
+	rm -rf node_modules
 
 clean-git: clean
 	git checkout -- apps/accessibility/js/
