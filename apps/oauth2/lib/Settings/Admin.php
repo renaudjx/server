@@ -22,19 +22,19 @@ declare(strict_types=1);
 
 namespace OCA\OAuth2\Settings;
 
-use OC\InitialStateService;
 use OCA\OAuth2\Db\ClientMapper;
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\IInitialStateService;
 use OCP\Settings\ISettings;
 
 class Admin implements ISettings {
 
-	/** @var InitialStateService */
+	/** @var IInitialStateService */
 	private $initialStateService;
 	/** @var ClientMapper */
 	private $clientMapper;
 
-	public function __construct(InitialStateService $initialStateService, ClientMapper $clientMapper) {
+	public function __construct(IInitialStateService $initialStateService, ClientMapper $clientMapper) {
 		$this->initialStateService = $initialStateService;
 		$this->clientMapper = $clientMapper;
 	}
